@@ -1,7 +1,7 @@
 
 import './index.sass'
 import Header from './components/header'
-import Section from './components/Section'
+import Section from './components/section'
 import Button from './components/button'
 import Footer from './components/footer'
 
