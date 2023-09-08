@@ -1,11 +1,12 @@
-import { useContext } from 'react'
-import { ConfigContext } from '../config-provider'
+import { useFetch } from "./useFetch"
 
 function Header() {
-    const { adviceId } = useContext(ConfigContext)
+
+    const { adviceId } = useFetch()
+    
     return (
         <header className="header">
-            <h2 className="headerTitle">ADVICE #{adviceId}</h2>
+            <h2 className="headerTitle" >ADVICE #{adviceId}</h2>
         </header>
     )
 }
