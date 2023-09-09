@@ -6,7 +6,7 @@ function Button() {
   const { handleClick } = useFetch()
 
   return (
-    <button className="button" onClick={handleClick}>
+    <button className="button" onClick={async () => await handleClick()}>
       <img src={iconDice} alt="" className="buttonIconDice" />
     </button>
   )
