@@ -1,10 +1,14 @@
 import iconDice from '../assets/images/icon-dice.svg'
-import { useFetch } from "./useFetch"
+import useAdviceStore from './adviceStore'
 
 function Button() {
 
-  const { handleClick } = useFetch()
+  const { fetchAdvice } = useAdviceStore()
 
+  const handleClick = async () => {
+    console.log(28)
+    await fetchAdvice()
+  }
   return (
     <button className="button" onClick={async () => await handleClick()}>
       <img src={iconDice} alt="" className="buttonIconDice" />

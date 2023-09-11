@@ -1,13 +1,14 @@
 import patternDividerDesktop from '../assets/images/pattern-divider-desktop.svg'
 import patternDividerMobile from '../assets/images/pattern-divider-mobile.svg'
-import { useFetch } from "./useFetch"
+import useAdviceStore from './adviceStore'
+
 function Section() {
 
-  const { advice, loading, error } = useFetch()
+  const { advice, loading, error } = useAdviceStore()
   return (
     <section className="section">
       <p className="sectionParagraph">
-        {error && "Failed to get advice"}
+        {error}
         {loading && "Loading..."}
         {advice}
       </p>
@@ -19,4 +20,5 @@ function Section() {
     </section>
   )
 }
+
 export default Section

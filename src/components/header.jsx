@@ -1,12 +1,12 @@
-import { useFetch } from "./useFetch"
+import useAdviceStore from './adviceStore'
 
 function Header() {
 
-    const { adviceId } = useFetch()
-    
+    const { id } = useAdviceStore()
+
     return (
         <header className="header">
-            <h2 className="headerTitle" >ADVICE #{adviceId}</h2>
+            <h2 className="headerTitle" >ADVICE #{id}</h2>
         </header>
     )
 }

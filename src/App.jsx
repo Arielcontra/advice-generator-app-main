@@ -1,4 +1,5 @@
-
+import { useEffect } from 'react'
+import useAdviceStore from './components/adviceStore'
 import './index.sass'
 import Header from './components/header'
 import Section from './components/section'
@@ -7,6 +8,11 @@ import Footer from './components/footer'
 
 function App() {
 
+  const { fetchAdvice } = useAdviceStore();
+
+  useEffect(() => {
+    fetchAdvice()
+  }, [])
 
   return (
     <>
