@@ -8,8 +8,8 @@ function Section() {
   return (
     <section className="section">
       <p className="sectionParagraph">
-        {error}
         {loading && "Loading..."}
+        {error && error}
         {advice}
       </p>
       <div className="wrapperPatternDivider">

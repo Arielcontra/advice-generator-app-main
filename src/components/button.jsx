@@ -3,10 +3,11 @@ import useAdviceStore from './adviceStore'
 
 function Button() {
 
-  const { fetchAdvice } = useAdviceStore()
+  const { clearAdvice, fetchAdvice } = useAdviceStore()
 
   const handleClick = async () => {
     console.log(28)
+    clearAdvice()
     await fetchAdvice()
   }
   return (

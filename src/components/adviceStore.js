@@ -1,21 +1,23 @@
-import create from 'zustand'
+import { create } from 'zustand'
 
 const useAdviceStore = create((set) => ({
     id: null,
     advice: '',
     loading: false,
     error: null,
+    clearAdvice: () => set({ id: null, advice: '', loading: false, error: null }),
     fetchAdvice: async () => {
+        console.log(5)
         set({ loading: true, error: null })
         try {
-            const response = await fetch('https://ai.adviceslip.com/advice')
+            const response = await fetch('https://api.adviceslip.com/advice')
             const data = await response.json()
-            set({ id: data.slip.id, advice: data.slip.advice })
+            const { id, advice } = data.slip
+            set({ id, advice, loading: false })
+            console.log(15)
         } catch (error) {
-            set({ error: 'Error fetching advice' })
-        } finally {
-            set({ loading: false })
-        }
+            set({ loading: false, error: 'Error fetching advice' })
+        } 
     }
 }))
 
