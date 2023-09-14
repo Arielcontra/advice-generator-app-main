@@ -109,7 +109,7 @@ body {
 .container .footer {
   text-decoration: none;
   color: var(--LightCyan);
-  font-size: 0.9375em;
+  font-size: 5px;
   height: 60px;
   width: 280px;
   display: flex;
@@ -128,9 +128,10 @@ body {
 }
 
 .footer .link .logoGitHub {
-  width: 1.5rem;
+  width: 1rem;
   height: auto;
   text-decoration: none;
+  margin-left: 12px;
 }
 
 @media (min-width: 800px) {
