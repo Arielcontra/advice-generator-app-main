@@ -17,7 +17,7 @@ const useAdviceStore = create((set) => ({
             console.log(15)
         } catch (error) {
             set({ loading: false, error: 'Error fetching advice' })
-        } 
+        }
     }
 }))
 
