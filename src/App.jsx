@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import useAdviceStore from './components/adviceStore'
-import './index.sass'
+import './index.css'
 import Header from './components/header'
 import Section from './components/section'
 import Button from './components/button'
